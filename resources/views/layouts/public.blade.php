@@ -53,8 +53,9 @@
         <div class="hidden md:flex items-center space-x-8 font-semibold">
           <a href="/" class="text-gray-800 border-b-2 border-yellow-400 pb-1">BERANDA</a>
           <a href="#" class="text-gray-500 hover:text-gray-800">DOMAIN SPBE</a>
-          <a href="#" class="text-gray-500 hover:text-gray-800">INDEKS</a>
-          <a href="#" class="text-gray-500 hover:text-gray-800">RENCANA</a>
+          <a href="#" class="text-gray-500 hover:text-gray-800">CAPAIAN</a>
+          <a href="#" class="text-gray-500 hover:text-gray-800">KEGIATAN</a>
+          <a href="#" class="text-gray-500 hover:text-gray-800">BERITA</a>
         </div>
       </div>
     </nav>

@@ -12,11 +12,22 @@ use Filament\Tables\Table;
 use Illuminate\Support\Str;
 use Filament\Forms\Set;
 
+// Import komponen Spatie
+use Filament\Forms\Components\SpatieMediaLibraryFileUpload;
+use Filament\Tables\Columns\SpatieMediaLibraryImageColumn;
+
 class BeritaResource extends Resource
 {
     protected static ?string $model = Berita::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-newspaper';
+    // protected static ?string $navigationGroup = 'Berita';
+    protected static ?string $navigationLabel = 'Berita';
+    protected static ?string $pluralModelLabel = 'Berita';
+    protected static ?string $modelLabel = 'Data';
+    protected static ?int $navigationSort = 2;
+
+
 
     public static function form(Form $form): Form
     {
@@ -28,7 +39,7 @@ class BeritaResource extends Resource
                             ->required()
                             ->maxLength(255)
                             ->live(onBlur: true)
-                            ->afterStateUpdated(fn (Set $set, ?string $state) => $set('slug', Str::slug($state))),
+                            ->afterStateUpdated(fn(Set $set, ?string $state) => $set('slug', Str::slug($state))),
 
                         Forms\Components\TextInput::make('slug')
                             ->required()
@@ -44,7 +55,7 @@ class BeritaResource extends Resource
                                 'Kesehatan' => 'Kesehatan',
                             ])
                             ->required(),
-                        
+
                         Forms\Components\Select::make('status')
                             ->options([
                                 'draft' => 'Draft',
@@ -61,12 +72,13 @@ class BeritaResource extends Resource
                             ->required()
                             ->default(auth()->id()),
 
-                        Forms\Components\FileUpload::make('gambar')
+                        // GANTI FileUpload dengan SpatieMediaLibraryFileUpload
+                        SpatieMediaLibraryFileUpload::make('gambar')
+                            ->collection('berita')
+                            ->disk('public_uploads') // <-- TAMBAHKAN BARIS INI
                             ->multiple()
                             ->reorderable()
-                            ->appendFiles()
                             ->image()
-                            ->directory('berita-images')
                             ->columnSpanFull(),
 
                         Forms\Components\RichEditor::make('isi_berita')
@@ -80,8 +92,11 @@ class BeritaResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\ImageColumn::make('gambar')
+                // GANTI ImageColumn dengan SpatieMediaLibraryImageColumn
+                SpatieMediaLibraryImageColumn::make('gambar')
                     ->label('Gambar Utama')
+                    ->collection('berita')
+                    ->disk('public_uploads')
                     ->stacked()
                     ->limit(1)
                     ->limitedRemainingText(),
@@ -89,7 +104,7 @@ class BeritaResource extends Resource
                 Tables\Columns\TextColumn::make('judul')
                     ->searchable()
                     ->sortable(),
-                
+
                 Tables\Columns\TextColumn::make('kategori')
                     ->searchable()
                     ->badge(),
@@ -100,12 +115,12 @@ class BeritaResource extends Resource
 
                 Tables\Columns\TextColumn::make('status')
                     ->badge()
-                    ->color(fn (string $state): string => match ($state) {
+                    ->color(fn(string $state): string => match ($state) {
                         'draft' => 'gray',
                         'published' => 'success',
                         'archived' => 'warning',
                     }),
-                    
+
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
@@ -129,8 +144,8 @@ class BeritaResource extends Resource
     {
         return [
             'index' => Pages\ListBeritas::route('/'),
-            'create' => Pages\CreateBerita::route('/create'),
-            'edit' => Pages\EditBerita::route('/{record}/edit'),
+            // 'create' => Pages\CreateBerita::route('/create'),
+            // 'edit' => Pages\EditBerita::route('/{record}/edit'),
         ];
     }
 }

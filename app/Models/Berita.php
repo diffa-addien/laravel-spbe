@@ -4,11 +4,12 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;use Spatie\MediaLibrary\HasMedia;
+use Spatie\MediaLibrary\InteractsWithMedia;
 
-class Berita extends Model
+class Berita extends Model implements HasMedia
 {
-    use HasFactory;
+    use HasFactory, InteractsWithMedia; // Tambahkan InteractsWithMedia
 
     /**
      * The attributes that are mass assignable.
@@ -20,7 +21,7 @@ class Berita extends Model
         'slug',
         'kategori',
         'isi_berita',
-        'gambar',
+        // 'gambar', sudah ganti ke spatie media
         'user_id',
         'status',
     ];
@@ -31,7 +32,7 @@ class Berita extends Model
      * @var array<string, string>
      */
     protected $casts = [
-        'gambar' => 'array', // Otomatis mengubah JSON gambar menjadi array PHP
+        // 'gambar' => 'array', // Otomatis mengubah JSON gambar menjadi array PHP
     ];
 
     /**
