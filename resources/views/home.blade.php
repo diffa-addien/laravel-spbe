@@ -6,12 +6,12 @@
   {{-- HERO SECTION --}}
   <div class="relative w-full">
     <div class="relative w-full py-24 lg:py-32 flex items-center justify-center text-center bg-cover bg-center"
-    style="background-image: url('https://images.unsplash.com/photo-1751640295309-d807c9bf7282?q=80&w=930&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
+    style="background-image: url('https://lh3.googleusercontent.com/gps-cs-s/AC9h4npI3S4lTsYWxLygyggrj0qvJK3J2fFNeFYV1jmaQR7MGUuoB2OX_Avi5kADkW3jY77Qx2OEHpyzIWYeXu4-HH9BDKHqbEJ5WdzovWOWFm6wfZnV762KSNIhvhU5a2fPL2yQXdup=s680-w680-h510');">
     <div class="absolute inset-0 bg-green-600/100 mix-blend-multiply"></div>
     <div class="relative z-10 px-4">
       <h2 class="text-white text-lg lg:text-2xl tracking-widest lg:font-bold my-2" data-aos="fade-down"
       data-aos-delay="200">Pemerintah Kabupaten Halmahera Timur</h2>
-      <h1 class="text-3xl lg:text-5xl font-bold leading-tight text-white" data-aos="fade-down">
+      <h1 class="text-3xl lg:text-5xl font-bold text-white" data-aos="fade-down">
       Sistem Pemerintahan Berbasis Elektronik
       </h1>
       <h2 class="text-white text-lg lg:text-2xl tracking-widest lg:font-bold my-3" data-aos="fade-down"
@@ -30,8 +30,78 @@
   </div>
   {{-- END HERO SECTION --}}
 
+  <div id="layanan" class="bg-gray-50 pt-24 pb-16">
+  <div class="container mx-auto px-6">
+    <!-- <div class="text-center mb-12" data-aos="fade-up">
+      <h2 class="text-3xl font-bold text-gray-800">Layanan Publik</h2>
+      <p class="text-gray-600 mt-2">Akses cepat ke berbagai layanan Pemerintah Kabupaten Halmahera Timur.</p>
+    </div> -->
+    <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-4 gap-y-12 gap-x-8">
+      
+      {{-- Baris 1 --}}
+      <a href="#" class="text-center group" data-aos="fade-up" data-aos-delay="100">
+        <div class="mx-auto bg-gray-200 w-20 h-20 flex items-center justify-center rounded-full text-4xl text-blue-600 transition-all duration-300 group-hover:bg-blue-100 group-hover:scale-110">
+          <i class="fa-solid fa-id-card"></i>
+        </div>
+        <h3 class="font-semibold text-lg mt-3 transition-all duration-300 group-hover:text-blue-600">Kependudukan</h3>
+      </a>
+
+      <a href="#" class="text-center group" data-aos="fade-up" data-aos-delay="200">
+        <div class="mx-auto bg-gray-200 w-20 h-20 flex items-center justify-center rounded-full text-4xl text-green-600 transition-all duration-300 group-hover:bg-green-100 group-hover:scale-110">
+          <i class="fa-solid fa-stethoscope"></i>
+        </div>
+        <h3 class="font-semibold text-lg mt-3 transition-all duration-300 group-hover:text-green-600">Kesehatan</h3>
+      </a>
+
+      <a href="#" class="text-center group" data-aos="fade-up" data-aos-delay="300">
+        <div class="mx-auto bg-gray-200 w-20 h-20 flex items-center justify-center rounded-full text-4xl text-yellow-600 transition-all duration-300 group-hover:bg-yellow-100 group-hover:scale-110">
+          <i class="fa-solid fa-graduation-cap"></i>
+        </div>
+        <h3 class="font-semibold text-lg mt-3 transition-all duration-300 group-hover:text-yellow-600">Pendidikan</h3>
+      </a>
+
+      <a href="#" class="text-center group" data-aos="fade-up" data-aos-delay="400">
+        <div class="mx-auto bg-gray-200 w-20 h-20 flex items-center justify-center rounded-full text-4xl text-red-600 transition-all duration-300 group-hover:bg-red-100 group-hover:scale-110">
+          <i class="fa-solid fa-file-signature"></i>
+        </div>
+        <h3 class="font-semibold text-lg mt-3 transition-all duration-300 group-hover:text-red-600">Perizinan</h3>
+      </a>
+
+      {{-- Baris 2 --}}
+      <a href="#" class="text-center group" data-aos="fade-up" data-aos-delay="500">
+        <div class="mx-auto bg-gray-200 w-20 h-20 flex items-center justify-center rounded-full text-4xl text-purple-600 transition-all duration-300 group-hover:bg-purple-100 group-hover:scale-110">
+          <i class="fa-solid fa-users"></i>
+        </div>
+        <h3 class="font-semibold text-lg mt-3 transition-all duration-300 group-hover:text-purple-600">Sosial</h3>
+      </a>
+
+      <a href="#" class="text-center group" data-aos="fade-up" data-aos-delay="600">
+        <div class="mx-auto bg-gray-200 w-20 h-20 flex items-center justify-center rounded-full text-4xl text-teal-600 transition-all duration-300 group-hover:bg-teal-100 group-hover:scale-110">
+          <i class="fa-solid fa-tractor"></i>
+        </div>
+        <h3 class="font-semibold text-lg mt-3 transition-all duration-300 group-hover:text-teal-600">Pertanian</h3>
+      </a>
+
+      <a href="#" class="text-center group" data-aos="fade-up" data-aos-delay="700">
+        <div class="mx-auto bg-gray-200 w-20 h-20 flex items-center justify-center rounded-full text-4xl text-orange-600 transition-all duration-300 group-hover:bg-orange-100 group-hover:scale-110">
+          <i class="fa-solid fa-umbrella-beach"></i>
+        </div>
+        <h3 class="font-semibold text-lg mt-3 transition-all duration-300 group-hover:text-orange-600">Pariwisata</h3>
+      </a>
+      
+      <a href="#" class="text-center group" data-aos="fade-up" data-aos-delay="800">
+        <div class="mx-auto bg-gray-200 w-20 h-20 flex items-center justify-center rounded-full text-4xl text-pink-600 transition-all duration-300 group-hover:bg-pink-100 group-hover:scale-110">
+          <i class="fa-solid fa-arrow-down-up-across-line"></i>
+        </div>
+        <h3 class="font-semibold text-lg mt-3 transition-all duration-300 group-hover:text-pink-600">Pekerjaan Umum</h3>
+      </a>
+
+    </div>
+  </div>
+</div>
+
   {{-- SECTION DOMAIN SPBE (TABLE) --}}
-  <div class="bg-gray-50 pt-24 pb-16">
+  <div id="domain" class="bg-gray-50 pt-24 pb-16">
     <div class="container mx-auto px-6">
     <div class="text-center mb-12" data-aos="fade-up">
       <h2 class="text-3xl font-bold text-gray-800">Domain & Indikator SPBE</h2>
@@ -74,39 +144,53 @@
   {{-- END SECTION DOMAIN SPBE (TABLE) --}}
 
   {{-- SECTION INDEKS SPBE --}}
-  <div class="bg-white py-16">
+  <div id="indeks" class="bg-white py-16">
     <div class="container mx-auto px-6">
     <div class="text-center mb-12" data-aos="fade-up">
-      <h2 class="text-3xl font-bold text-gray-800">Capaian Indeks SPBE</h2>
-      <p class="text-gray-600 mt-2">Perkembangan nilai Indeks SPBE Kabupaten Halmahera Timur dari tahun ke tahun.</p>
+      <h2 class="text-3xl font-bold text-gray-800">Perkembangan SPBE</h2>
+      <p class="text-gray-600 mt-2">Capaian Indeks Sistem Pemerintahan Berbasis Elektronik dari tahun ke tahun.</p>
     </div>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      {{-- Data Dummy Indeks --}}
-      <div class="bg-gray-50 p-6 rounded-lg shadow-lg text-center" data-aos="fade-up" data-aos-delay="100">
-      <h3 class="text-xl font-bold text-gray-500">Tahun 2022</h3>
-      <p class="text-5xl font-bold text-blue-600 my-4">3.14</p>
-      <a href="#" class="text-blue-500 hover:underline">Lihat Laporan <i
-        class="fa-solid fa-arrow-right-long ml-1"></i></a>
+
+    @if($indeksSpbe->count() > 0)
+    <div x-data="{ activeSlide: 0, slides: {{ $indeksSpbe->count() }} }" class="relative max-w-5xl mx-auto"
+      data-aos="fade-up">
+      @foreach($indeksSpbe as $indeks)
+      <div x-show="activeSlide === {{ $loop->index }}"
+      class="flex flex-col md:flex-row items-center justify-center gap-8">
+      <div class="w-full md:w-2/3">
+      {{-- UBAH CARA PEMANGGILAN GAMBAR DI SINI --}}
+      <img src="{{ $indeks->gambar_url }}" alt="Laporan SPBE Tahun {{ $indeks->tahun }}"
+      class="rounded-lg shadow-lg w-full">
       </div>
-      <div class="bg-gray-50 p-6 rounded-lg shadow-lg text-center" data-aos="fade-up" data-aos-delay="200">
-      <h3 class="text-xl font-bold text-gray-500">Tahun 2023</h3>
-      <p class="text-5xl font-bold text-blue-600 my-4">3.45</p>
-      <a href="#" class="text-blue-500 hover:underline">Lihat Laporan <i
-        class="fa-solid fa-arrow-right-long ml-1"></i></a>
+      <div class="w-full md:w-1/3 text-center md:text-left">
+      <h3 class="text-6xl font-bold text-gray-700">{{ $indeks->tahun }}</h3>
+      <div class="mt-4 bg-sky-800 text-white inline-block p-4 rounded-lg shadow-xl">
+      <span class="text-sm">INDEKS SPBE</span>
+      <p class="text-4xl font-bold">{{ number_format((float) $indeks->nilai_indeks, 2) }}</p>
+      <p class="text-lg">({{ $indeks->predikat }})</p>
       </div>
-      <div class="bg-gray-50 p-6 rounded-lg shadow-lg text-center" data-aos="fade-up" data-aos-delay="300">
-      <h3 class="text-xl font-bold text-gray-500">Tahun 2024</h3>
-      <p class="text-5xl font-bold text-green-600 my-4">3.80</p>
-      <a href="#" class="text-blue-500 hover:underline">Lihat Laporan <i
-        class="fa-solid fa-arrow-right-long ml-1"></i></a>
       </div>
+      </div>
+    @endforeach
+
+      <button @click="activeSlide = (activeSlide - 1 + slides) % slides"
+      class="absolute top-1/2 left-0 md:-left-16 transform -translate-y-1/2 bg-white rounded-full p-3 shadow-lg hover:bg-gray-100 transition">
+      <i class="fa-solid fa-arrow-left text-blue-600"></i>
+      </button>
+      <button @click="activeSlide = (activeSlide + 1) % slides"
+      class="absolute top-1/2 right-0 md:-right-16 transform -translate-y-1/2 bg-white rounded-full p-3 shadow-lg hover:bg-gray-100 transition">
+      <i class="fa-solid fa-arrow-right text-blue-600"></i>
+      </button>
     </div>
+    @else
+    <p class="text-center">Data Indeks SPBE belum tersedia.</p>
+    @endif
     </div>
   </div>
   {{-- END SECTION INDEKS SPBE --}}
 
   {{-- SECTION KEGIATAN --}}
-  <div class="bg-gray-50 py-16">
+  <div id="kegiatan" class="bg-gray-50 py-16">
     <div class="container mx-auto px-6">
     <div class="text-center mb-12" data-aos="fade-up">
       <h2 class="text-3xl font-bold text-gray-800">Kegiatan</h2>
@@ -128,7 +212,8 @@
       <a href="#" class="hover:text-blue-600">{{ $kegiatan->nama_kegiatan }}</a>
       </h3>
       <div class="text-xs text-gray-500">
-      {{ \Carbon\Carbon::parse($kegiatan->tanggal_kegiatan)->translatedFormat('d F Y') }}</div>
+      {{ \Carbon\Carbon::parse($kegiatan->tanggal_kegiatan)->translatedFormat('d F Y') }}
+      </div>
       </div>
       </div>
     @endforeach
@@ -138,32 +223,62 @@
   {{-- END SECTION KEGIATAN --}}
 
   {{-- SECTION BERITA --}}
-  <div class="bg-white py-16">
+  <div id="berita" class="bg-white py-16">
     <div class="container mx-auto px-6">
     <div class="text-center mb-12" data-aos="fade-up">
-      <h2 class="text-3xl font-bold text-gray-800">Berita Terbaru</h2>
+      <h2 class="text-3xl font-bold text-gray-800">Berita Terkini</h2>
       <p class="text-gray-600 mt-2">Informasi dan berita seputar Pemerintah Kabupaten Halmahera Timur.</p>
     </div>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      {{-- GANTI DARI @for MENJADI @foreach --}}
-      @foreach ($beritaTerbaru as $berita)
-      <div class="bg-gray-50 rounded-lg shadow-md overflow-hidden" data-aos="fade-up"
-      data-aos-delay="{{ ($loop->index + 1) * 100 }}">
+
+    {{-- Wrapper utama untuk layout grid --}}
+    <div class="grid grid-cols-1 lg:grid-cols-3 lg:gap-8">
+
+      <div class="lg:col-span-2 mb-8 lg:mb-0" data-aos="fade-up">
+      @if ($beritaUtama)
+      <div class="bg-gray-50 rounded-lg shadow-md overflow-hidden h-full">
       <a href="#">
-      <img src="{{ $berita->getFirstMediaUrl('berita') ?: 'https://placehold.co/600x400?text=Berita' }}"
-      alt="Gambar {{ $berita->judul }}" class="w-full h-48 object-cover">
+      <img
+        src="{{ $beritaUtama->getFirstMediaUrl('berita') ?: 'https://placehold.co/800x450?text=Berita+Utama' }}"
+        alt="Gambar {{ $beritaUtama->judul }}" class="w-full h-64 lg:h-96 object-cover">
       </a>
       <div class="p-6">
-      <span class="text-sm text-blue-500 bg-blue-100 py-1 px-3 rounded-full">{{ $berita->kategori }}</span>
-      <h3 class="font-bold text-xl my-2">
-      <a href="#" class="hover:text-blue-600">{{ $berita->judul }}</a>
+      <span class="text-sm text-blue-500 bg-blue-100 py-1 px-3 rounded-full">{{ $beritaUtama->kategori }}</span>
+      <h3 class="font-bold text-2xl lg:text-3xl my-3">
+        <a href="#" class="hover:text-blue-600">{{ $beritaUtama->judul }}</a>
       </h3>
-      <p class="text-gray-600 text-sm mb-4">
-      {{ \Illuminate\Support\Str::limit(strip_tags($berita->isi_berita), 100) }}</p>
-      <div class="text-xs text-gray-500">Oleh: {{ $berita->penulis->name }}</div>
+      <p class="text-gray-600 text-base mb-4">
+        {{ \Illuminate\Support\Str::limit(strip_tags($beritaUtama->isi_berita), 200) }}
+      </p>
+      <div class="text-sm text-gray-500">Oleh: {{ $beritaUtama->penulis->name }}</div>
       </div>
       </div>
-    @endforeach
+    @else
+      <p>Belum ada berita untuk ditampilkan.</p>
+    @endif
+      </div>
+
+      <div class="lg:col-span-1" data-aos="fade-up" data-aos-delay="200">
+      {{-- Wrapper untuk scroll: atur max-h-[...] sesuai kebutuhan --}}
+      <div class="space-y-4 max-h-[550px] overflow-y-auto pr-2">
+        @forelse ($beritaLainnya as $berita)
+      <div class="bg-gray-50 rounded-lg shadow-md overflow-hidden flex items-center">
+      <a href="#" class="w-1/3 flex-shrink-0">
+        <img src="{{ $berita->getFirstMediaUrl('berita') ?: 'https://placehold.co/200x200?text=Berita' }}"
+        alt="Gambar {{ $berita->judul }}" class="w-full h-24 object-cover">
+      </a>
+      <div class="p-4 w-2/3">
+        <span class="text-xs text-blue-500 bg-blue-100 py-1 px-2 rounded-full">{{ $berita->kategori }}</span>
+        <h4 class="font-bold text-md mt-2">
+        <a href="#" class="hover:text-blue-600 leading-tight">{{ $berita->judul }}</a>
+        </h4>
+      </div>
+      </div>
+      @empty
+      {{-- Tidak perlu menampilkan apa-apa jika tidak ada berita lain --}}
+      @endforelse
+      </div>
+      </div>
+
     </div>
     </div>
   </div>
