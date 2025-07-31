@@ -36,7 +36,7 @@
         <div class="hidden md:flex items-center space-x-8 font-semibold">
           <a href="/" class="text-gray-800 hover:text-blue-600">BERANDA</a>
           <a href="#domain" class="text-gray-500 hover:text-blue-600">DOMAIN</a>
-          <a href="#indeks" class="text-gray-500 hover:text-blue-600">INDEKS</a>
+          <a href="#indeks" class="text-gray-500 hover:text-blue-600">CAPAIAN</a>
           <a href="#kegiatan" class="text-gray-500 hover:text-blue-600">KEGIATAN</a>
           <a href="#berita" class="text-gray-500 hover:text-blue-600">BERITA</a>
         </div>
@@ -55,7 +55,7 @@
       <div x-show="open" @click.away="open = false" x-transition class="md:hidden mt-4">
         <a href="/" class="block py-2 px-4 text-sm text-gray-800 hover:bg-gray-100 rounded">BERANDA</a>
         <a href="#domain" class="block py-2 px-4 text-sm text-gray-800 hover:bg-gray-100 rounded">DOMAIN</a>
-        <a href="#indeks" class="block py-2 px-4 text-sm text-gray-800 hover:bg-gray-100 rounded">INDEKS</a>
+        <a href="#indeks" class="block py-2 px-4 text-sm text-gray-800 hover:bg-gray-100 rounded">CAPAIAN</a>
         <a href="#kegiatan" class="block py-2 px-4 text-sm text-gray-800 hover:bg-gray-100 rounded">KEGIATAN</a>
         <a href="#berita" class="block py-2 px-4 text-sm text-gray-800 hover:bg-gray-100 rounded">BERITA</a>
       </div>
@@ -68,7 +68,7 @@
   </main>
 
   {{-- (Footer tidak berubah) --}}
-  <footer class="bg-gray-800 text-white">
+  <footer class="bg-green-900 text-white">
     <div class="container mx-auto px-6 py-4 text-center">
       <p>&copy; {{ date('Y') }} Pemerintah Kabupaten Halmahera Timur. All Rights Reserved.</p>
     </div>
@@ -77,7 +77,7 @@
   {{-- (Script AOS tidak berubah) --}}
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
-    AOS.init({ duration: 800, once: true });
+    AOS.init({ duration: 800, once: false });
   </script>
 
 </body>
