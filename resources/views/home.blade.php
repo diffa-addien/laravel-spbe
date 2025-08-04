@@ -204,7 +204,7 @@
   <div id="kegiatan" class="bg-white py-16">
     <div class="container mx-auto px-6">
     <div class="text-center mb-12" data-aos="fade-up">
-      <h2 class="text-3xl font-bold text-gray-800">Kegiatan Terkini</h2>
+      <h2 class="text-3xl font-bold text-gray-800">Kegiatan</h2>
       <p class="text-gray-600 mt-2">Dokumentasi kegiatan dan program terbaru dari Pemkab Haltim.</p>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
