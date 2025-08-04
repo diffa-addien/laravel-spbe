@@ -6,7 +6,7 @@
   {{-- HERO SECTION --}}
   <div class="relative w-full">
     <div class="relative w-full py-24 lg:py-32 flex items-center justify-center text-center bg-cover bg-center"
-    style="background-image: url('https://lh3.googleusercontent.com/gps-cs-s/AC9h4npI3S4lTsYWxLygyggrj0qvJK3J2fFNeFYV1jmaQR7MGUuoB2OX_Avi5kADkW3jY77Qx2OEHpyzIWYeXu4-HH9BDKHqbEJ5WdzovWOWFm6wfZnV762KSNIhvhU5a2fPL2yQXdup=s680-w680-h510');">
+    style="background-image: url('{{ $heroImageUrl }}');">
     <div class="absolute inset-0 bg-green-600/100 mix-blend-multiply"></div>
     <div class="relative z-10 px-4 mb-[20vh]">
       <h2 class="text-white text-lg lg:text-2xl tracking-widest lg:font-bold my-2" data-aos="fade-down"
@@ -29,83 +29,39 @@
   </div>
   {{-- END HERO SECTION --}}
 
+  {{-- SECTION LAYANAN --}}
   <div id="layanan" class="bg-gray-50 pt-24 pb-16">
     <div class="container mx-auto px-6">
-    <!-- <div class="text-center mb-12" data-aos="fade-up">
-      <h2 class="text-3xl font-bold text-gray-800">Layanan Publik</h2>
-      <p class="text-gray-600 mt-2">Akses cepat ke berbagai layanan Pemerintah Kabupaten Halmahera Timur.</p>
-    </div> -->
-    <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-4 gap-y-12 gap-x-8">
+    <div class="text-center mb-12" data-aos="fade-up">
+      <h2 class="text-3xl font-bold text-gray-800">Layanan Aplikasi</h2>
+      <p class="text-gray-600 mt-2">Temukan aplikasi digital yang Anda butuhkan.</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
 
-      {{-- Baris 1 --}}
-      <a href="#" class="text-center group" data-aos="fade-up" data-aos-delay="100">
-      <div
-        class="mx-auto bg-gray-200 w-20 h-20 flex items-center justify-center rounded-full text-4xl text-blue-600 transition-all duration-300 group-hover:bg-blue-100 group-hover:scale-110">
-        <i class="fa-solid fa-id-card"></i>
-      </div>
-      <h3 class="font-semibold text-lg mt-3 transition-all duration-300 group-hover:text-blue-600">Kependudukan</h3>
-      </a>
-
-      <a href="#" class="text-center group" data-aos="fade-up" data-aos-delay="200">
-      <div
-        class="mx-auto bg-gray-200 w-20 h-20 flex items-center justify-center rounded-full text-4xl text-green-600 transition-all duration-300 group-hover:bg-green-100 group-hover:scale-110">
-        <i class="fa-solid fa-stethoscope"></i>
-      </div>
-      <h3 class="font-semibold text-lg mt-3 transition-all duration-300 group-hover:text-green-600">Kesehatan</h3>
-      </a>
-
-      <a href="#" class="text-center group" data-aos="fade-up" data-aos-delay="300">
-      <div
-        class="mx-auto bg-gray-200 w-20 h-20 flex items-center justify-center rounded-full text-4xl text-yellow-600 transition-all duration-300 group-hover:bg-yellow-100 group-hover:scale-110">
-        <i class="fa-solid fa-graduation-cap"></i>
-      </div>
-      <h3 class="font-semibold text-lg mt-3 transition-all duration-300 group-hover:text-yellow-600">Pendidikan</h3>
-      </a>
-
-      <a href="#" class="text-center group" data-aos="fade-up" data-aos-delay="400">
-      <div
-        class="mx-auto bg-gray-200 w-20 h-20 flex items-center justify-center rounded-full text-4xl text-red-600 transition-all duration-300 group-hover:bg-red-100 group-hover:scale-110">
-        <i class="fa-solid fa-file-signature"></i>
-      </div>
-      <h3 class="font-semibold text-lg mt-3 transition-all duration-300 group-hover:text-red-600">Perizinan</h3>
-      </a>
-
-      {{-- Baris 2 --}}
-      <a href="#" class="text-center group" data-aos="fade-up" data-aos-delay="500">
-      <div
-        class="mx-auto bg-gray-200 w-20 h-20 flex items-center justify-center rounded-full text-4xl text-purple-600 transition-all duration-300 group-hover:bg-purple-100 group-hover:scale-110">
+      <a href="{{ route('layanan.list', 'umum') }}"
+      class="block bg-white p-8 rounded-lg shadow-lg text-center group hover:shadow-2xl transition-shadow duration-300"
+      data-aos="fade-right">
+      <div class="text-6xl text-blue-500 group-hover:scale-110 transition-transform">
         <i class="fa-solid fa-users"></i>
       </div>
-      <h3 class="font-semibold text-lg mt-3 transition-all duration-300 group-hover:text-purple-600">Sosial</h3>
+      <h3 class="text-2xl font-bold mt-4 text-gray-800">Aplikasi Umum</h3>
+      <p class="text-gray-500 mt-2">Layanan yang dapat diakses oleh seluruh masyarakat.</p>
       </a>
 
-      <a href="#" class="text-center group" data-aos="fade-up" data-aos-delay="600">
-      <div
-        class="mx-auto bg-gray-200 w-20 h-20 flex items-center justify-center rounded-full text-4xl text-teal-600 transition-all duration-300 group-hover:bg-teal-100 group-hover:scale-110">
-        <i class="fa-solid fa-tractor"></i>
+      <a href="{{ route('layanan.list', 'khusus') }}"
+      class="block bg-white p-8 rounded-lg shadow-lg text-center group hover:shadow-2xl transition-shadow duration-300"
+      data-aos="fade-left">
+      <div class="text-6xl text-green-500 group-hover:scale-110 transition-transform">
+        <i class="fa-solid fa-user-shield"></i>
       </div>
-      <h3 class="font-semibold text-lg mt-3 transition-all duration-300 group-hover:text-teal-600">Pertanian</h3>
-      </a>
-
-      <a href="#" class="text-center group" data-aos="fade-up" data-aos-delay="700">
-      <div
-        class="mx-auto bg-gray-200 w-20 h-20 flex items-center justify-center rounded-full text-4xl text-orange-600 transition-all duration-300 group-hover:bg-orange-100 group-hover:scale-110">
-        <i class="fa-solid fa-umbrella-beach"></i>
-      </div>
-      <h3 class="font-semibold text-lg mt-3 transition-all duration-300 group-hover:text-orange-600">Pariwisata</h3>
-      </a>
-
-      <a href="#" class="text-center group" data-aos="fade-up" data-aos-delay="800">
-      <div
-        class="mx-auto bg-gray-200 w-20 h-20 flex items-center justify-center rounded-full text-4xl text-pink-600 transition-all duration-300 group-hover:bg-pink-100 group-hover:scale-110">
-        <i class="fa-solid fa-arrow-down-up-across-line"></i>
-      </div>
-      <h3 class="font-semibold text-lg mt-3 transition-all duration-300 group-hover:text-pink-600">Pekerjaan Umum</h3>
+      <h3 class="text-2xl font-bold mt-4 text-gray-800">Aplikasi Khusus</h3>
+      <p class="text-gray-500 mt-2">Sistem untuk Aparatur Sipil Negara (ASN).</p>
       </a>
 
     </div>
     </div>
   </div>
+  {{-- END SECTION LAYANAN --}}
 
   {{-- SECTION DOMAIN SPBE (TABLE) --}}
   <div id="domain" class="bg-gray-50 pt-24 pb-16">

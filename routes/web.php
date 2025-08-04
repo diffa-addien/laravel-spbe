@@ -7,6 +7,8 @@ use App\Models\Kegiatan;
 use App\Models\IndeksSpbe;
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Storage; // <-- Tambahkan ini
+use Spatie\Valuestore\Valuestore; 
 
 /*
 |--------------------------------------------------------------------------
@@ -28,13 +30,20 @@ Route::get('/', function () {
 
     $indeksSpbe = IndeksSpbe::orderBy('tahun', 'desc')->get();
 
+    $settings = Valuestore::make(storage_path('app/settings.json'));
+    $heroImageName = $settings->get('hero_image');
+    $heroImageUrl = $heroImageName
+        ? Storage::disk('public_uploads')->url($heroImageName)
+        : 'https://img.harianjogja.com/posts/2024/06/07/1177131/istana-presiden-ikn.jpg'; // Gambar default
+
     return view('home', [
+        'heroImageUrl' => $heroImageUrl, // <-- Kirim URL ke view
         'beritaUtama' => $beritaUtama,
         'beritaLainnya' => $beritaLainnya,
         'kegiatanTerbaru' => $kegiatanTerbaru,
         'indeksSpbe' => $indeksSpbe, // Kirim data dummy ke view
     ]);
 });
-
+Route::get('/layanan/{kategori}', [PageController::class, 'showLayanan'])->name('layanan.list');
 Route::get('/berita/{berita:slug}', [PageController::class, 'showBerita'])->name('berita.show');
 Route::get('/kegiatan/{kegiatan:slug}', [PageController::class, 'showKegiatan'])->name('kegiatan.show');

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Berita;
 use App\Models\Kegiatan;
+use App\Models\LayananAplikasi;
 
 class PageController extends Controller
 {
@@ -40,4 +41,21 @@ class PageController extends Controller
 
         return view('detail-kegiatan', compact('kegiatan', 'kegiatanLainnya'));
     }
+
+    public function showLayanan(string $kategori)
+{
+    // Validasi agar hanya 'umum' atau 'khusus' yang bisa diakses
+    if (!in_array($kategori, ['umum', 'khusus'])) {
+        abort(404);
+    }
+
+    $aplikasi = LayananAplikasi::where('status', 'Aktif')
+        ->where('kategori', ucfirst($kategori)) // 'umum' -> 'Umum'
+        ->get();
+
+    $judulHalaman = 'Daftar Aplikasi ' . ucfirst($kategori);
+
+    return view('daftar-layanan', compact('aplikasi', 'judulHalaman'));
+}
+
 }

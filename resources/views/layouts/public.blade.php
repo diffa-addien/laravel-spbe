@@ -25,8 +25,9 @@
 
   {{-- ================= HEADER BARU ================= --}}
   <header x-data="{ open: false }" class="bg-white shadow-md sticky top-0 z-50">
-    <nav class="container mx-auto px-6 py-4">
+    <nav class="container mx-auto px-6 py-2">
       <div class="flex items-center justify-between">
+
         <div class="text-xl font-bold text-gray-800">
           <a href="/">
             <img src="{{ url('assets/SPBE_Haltim.jpg') }}" alt="Logo SPBE Haltim" class="h-[50px]">
@@ -35,10 +36,11 @@
 
         <div class="hidden md:flex items-center space-x-8 font-semibold">
           <a href="/" class="text-gray-800 hover:text-blue-600">BERANDA</a>
-          <a href="#domain" class="text-gray-500 hover:text-blue-600">DOMAIN</a>
-          <a href="#indeks" class="text-gray-500 hover:text-blue-600">CAPAIAN</a>
-          <a href="#kegiatan" class="text-gray-500 hover:text-blue-600">KEGIATAN</a>
-          <a href="#berita" class="text-gray-500 hover:text-blue-600">BERITA</a>
+          {{-- Link diubah menjadi /#... --}}
+          <a href="/#domain" class="text-gray-500 hover:text-blue-600">DOMAIN</a>
+          <a href="/#indeks" class="text-gray-500 hover:text-blue-600">INDEKS</a>
+          <a href="/#kegiatan" class="text-gray-500 hover:text-blue-600">KEGIATAN</a>
+          <a href="/#berita" class="text-gray-500 hover:text-blue-600">BERITA</a>
         </div>
 
         <div class="md:hidden">
@@ -54,10 +56,15 @@
 
       <div x-show="open" @click.away="open = false" x-transition class="md:hidden mt-4">
         <a href="/" class="block py-2 px-4 text-sm text-gray-800 hover:bg-gray-100 rounded">BERANDA</a>
-        <a href="#domain" class="block py-2 px-4 text-sm text-gray-800 hover:bg-gray-100 rounded">DOMAIN</a>
-        <a href="#indeks" class="block py-2 px-4 text-sm text-gray-800 hover:bg-gray-100 rounded">CAPAIAN</a>
-        <a href="#kegiatan" class="block py-2 px-4 text-sm text-gray-800 hover:bg-gray-100 rounded">KEGIATAN</a>
-        <a href="#berita" class="block py-2 px-4 text-sm text-gray-800 hover:bg-gray-100 rounded">BERITA</a>
+        {{-- Link diubah menjadi /#... --}}
+        <a href="/#domain" @click="open = false"
+          class="block py-2 px-4 text-sm text-gray-800 hover:bg-gray-100 rounded">DOMAIN</a>
+        <a href="/#indeks" @click="open = false"
+          class="block py-2 px-4 text-sm text-gray-800 hover:bg-gray-100 rounded">INDEKS</a>
+        <a href="/#kegiatan" @click="open = false"
+          class="block py-2 px-4 text-sm text-gray-800 hover:bg-gray-100 rounded">KEGIATAN</a>
+        <a href="/#berita" @click="open = false"
+          class="block py-2 px-4 text-sm text-gray-800 hover:bg-gray-100 rounded">BERITA</a>
       </div>
     </nav>
   </header>

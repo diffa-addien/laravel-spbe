@@ -18,6 +18,7 @@ class IndeksSpbeResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-chart-bar';
     protected static ?string $navigationLabel = 'Indeks SPBE';
+    protected static ?int $navigationSort = 2;
 
     public static function form(Form $form): Form
     {

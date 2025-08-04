@@ -22,7 +22,7 @@ class KegiatanResource extends Resource
     protected static ?string $navigationLabel = 'Kegiatan';
     protected static ?string $pluralModelLabel = 'Kegiatan';
     protected static ?string $modelLabel = 'Data';
-    protected static ?int $navigationSort = 1;
+    protected static ?int $navigationSort = 3;
 
     public static function form(Form $form): Form
     {
