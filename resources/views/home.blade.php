@@ -8,7 +8,7 @@
     <div class="relative w-full py-24 lg:py-32 flex items-center justify-center text-center bg-cover bg-center"
     style="background-image: url('https://lh3.googleusercontent.com/gps-cs-s/AC9h4npI3S4lTsYWxLygyggrj0qvJK3J2fFNeFYV1jmaQR7MGUuoB2OX_Avi5kADkW3jY77Qx2OEHpyzIWYeXu4-HH9BDKHqbEJ5WdzovWOWFm6wfZnV762KSNIhvhU5a2fPL2yQXdup=s680-w680-h510');">
     <div class="absolute inset-0 bg-green-600/100 mix-blend-multiply"></div>
-    <div class="relative z-10 px-4">
+    <div class="relative z-10 px-4 mb-[20vh]">
       <h2 class="text-white text-lg lg:text-2xl tracking-widest lg:font-bold my-2" data-aos="fade-down"
       data-aos-delay="200">Pemerintah Kabupaten Halmahera Timur</h2>
       <h1 class="text-3xl lg:text-5xl font-bold text-white" data-aos="fade-down">
@@ -16,7 +16,6 @@
       </h1>
       <h2 class="text-white text-lg lg:text-2xl tracking-widest lg:font-bold my-3" data-aos="fade-down"
       data-aos-delay="400">Jelajahi Bagaimana Kami Menjalankan SPBE</h2>
-      <br class="mb-[20vh]" />
     </div>
     </div>
     <div class="absolute bottom-0 left-0 w-full h-auto z-0">
