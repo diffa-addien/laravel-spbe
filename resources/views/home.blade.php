@@ -55,7 +55,7 @@
         <i class="fa-solid fa-user-shield"></i>
       </div>
       <h3 class="text-2xl font-bold mt-4 text-gray-800">Aplikasi Khusus</h3>
-      <p class="text-gray-500 mt-2">Sistem untuk Aparatur Sipil Negara (ASN).</p>
+      <p class="text-gray-500 mt-2">Sistem untuk layanan tertentu.</p>
       </a>
 
     </div>
