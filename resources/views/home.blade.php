@@ -64,7 +64,7 @@
   {{-- END SECTION LAYANAN --}}
 
   {{-- SECTION DOMAIN SPBE (TABLE) --}}
-  <div id="domain" class="bg-gray-50 pt-24 pb-16">
+  <!-- <div id="domain" class="bg-gray-50 pt-24 pb-16">
     <div class="container mx-auto px-6">
     <div class="text-center mb-12" data-aos="fade-up">
       <h2 class="text-3xl font-bold text-gray-800">Domain & Indikator SPBE</h2>
@@ -103,7 +103,7 @@
       </div>
     </div>
     </div>
-  </div>
+  </div> -->
   {{-- END SECTION DOMAIN SPBE (TABLE) --}}
 
   {{-- SECTION INDEKS SPBE --}}

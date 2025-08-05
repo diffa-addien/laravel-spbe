@@ -37,7 +37,7 @@
         <div class="hidden md:flex items-center space-x-8 font-semibold">
           <a href="/" class="text-gray-800 hover:text-blue-600">BERANDA</a>
           {{-- Link diubah menjadi /#... --}}
-          <a href="/#domain" class="text-gray-500 hover:text-blue-600">DOMAIN</a>
+          <a href="{{ route('domain-spbe.show') }}" class="block py-2 px-4 text-sm text-gray-800 hover:bg-gray-100 rounded">DOMAIN</a>
           <a href="/#indeks" class="text-gray-500 hover:text-blue-600">INDEKS</a>
           <a href="/#kegiatan" class="text-gray-500 hover:text-blue-600">KEGIATAN</a>
           <a href="/#berita" class="text-gray-500 hover:text-blue-600">BERITA</a>

@@ -44,6 +44,7 @@ Route::get('/', function () {
         'indeksSpbe' => $indeksSpbe, // Kirim data dummy ke view
     ]);
 });
+Route::get('/domain-spbe', [PageController::class, 'showDomainSpbe'])->name('domain-spbe.show');
 Route::get('/layanan/{kategori}', [PageController::class, 'showLayanan'])->name('layanan.list');
 Route::get('/berita/{berita:slug}', [PageController::class, 'showBerita'])->name('berita.show');
 Route::get('/kegiatan/{kegiatan:slug}', [PageController::class, 'showKegiatan'])->name('kegiatan.show');

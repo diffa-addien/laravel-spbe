@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Berita;
 use App\Models\Kegiatan;
 use App\Models\LayananAplikasi;
+use App\Models\DomainSpbe; 
 
 class PageController extends Controller
 {
@@ -43,19 +44,27 @@ class PageController extends Controller
     }
 
     public function showLayanan(string $kategori)
-{
-    // Validasi agar hanya 'umum' atau 'khusus' yang bisa diakses
-    if (!in_array($kategori, ['umum', 'khusus'])) {
-        abort(404);
+    {
+        // Validasi agar hanya 'umum' atau 'khusus' yang bisa diakses
+        if (!in_array($kategori, ['umum', 'khusus'])) {
+            abort(404);
+        }
+
+        $aplikasi = LayananAplikasi::where('status', 'Aktif')
+            ->where('kategori', ucfirst($kategori)) // 'umum' -> 'Umum'
+            ->get();
+
+        $judulHalaman = 'Daftar Aplikasi ' . ucfirst($kategori);
+
+        return view('daftar-layanan', compact('aplikasi', 'judulHalaman'));
     }
 
-    $aplikasi = LayananAplikasi::where('status', 'Aktif')
-        ->where('kategori', ucfirst($kategori)) // 'umum' -> 'Umum'
-        ->get();
+    public function showDomainSpbe()
+    {
+        $domains = DomainSpbe::all();
+        $kategori = DomainSpbe::select('kategori')->distinct()->get();
 
-    $judulHalaman = 'Daftar Aplikasi ' . ucfirst($kategori);
-
-    return view('daftar-layanan', compact('aplikasi', 'judulHalaman'));
-}
+        return view('domain-spbe', compact('domains', 'kategori'));
+    }
 
 }
