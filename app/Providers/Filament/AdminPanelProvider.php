@@ -17,6 +17,8 @@ use Illuminate\Routing\Middleware\SubstituteBindings;
 use Illuminate\Session\Middleware\AuthenticateSession;
 use Illuminate\Session\Middleware\StartSession;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
+use App\Filament\Pages\GantiPassword; // <-- Tambahkan ini di atas
+use Filament\Navigation\MenuItem;      // <-- Tambahkan ini di atas
 
 class AdminPanelProvider extends PanelProvider
 {
@@ -54,6 +56,12 @@ class AdminPanelProvider extends PanelProvider
             ])
             ->authMiddleware([
                 Authenticate::class,
+            ])
+            ->userMenuItems([
+                MenuItem::make()
+                    ->label('Ganti Password')
+                    ->url(fn(): string => GantiPassword::getUrl())
+                    ->icon('heroicon-o-key'),
             ])
             ->plugin(
                 \Hasnayeen\Themes\ThemesPlugin::make()
