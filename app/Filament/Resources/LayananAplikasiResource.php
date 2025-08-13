@@ -54,7 +54,7 @@ class LayananAplikasiResource extends Resource
                 Tables\Columns\TextColumn::make('nama_aplikasi')->searchable(),
                 Tables\Columns\TextColumn::make('kategori')->badge(),
                 Tables\Columns\TextColumn::make('status')->badge()
-                    ->color(fn (string $state): string => match ($state) {
+                    ->color(fn(string $state): string => match ($state) {
                         'Aktif' => 'success',
                         'Tidak Aktif' => 'danger',
                     }),
@@ -62,6 +62,7 @@ class LayananAplikasiResource extends Resource
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
+                Tables\Actions\DeleteAction::make(),
             ]);
     }
 

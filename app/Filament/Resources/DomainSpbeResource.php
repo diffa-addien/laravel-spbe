@@ -16,7 +16,8 @@ class DomainSpbeResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-building-library';
     protected static ?string $navigationLabel = 'Domain SPBE';
-
+    protected static ?string $pluralModelLabel = 'Domain SPBE';
+    protected static ?string $modelLabel = 'Data';
     protected static ?int $navigationSort = 1;
 
     public static function form(Form $form): Form
@@ -55,6 +56,10 @@ class DomainSpbeResource extends Resource
                         'Manajemen' => 'Manajemen',
                         'Layanan' => 'Layanan',
                     ])
+            ])
+            ->actions([
+                Tables\Actions\EditAction::make(),
+                Tables\Actions\DeleteAction::make(),
             ]);
     }
 
