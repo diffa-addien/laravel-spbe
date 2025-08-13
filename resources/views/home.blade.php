@@ -8,7 +8,7 @@
     <div class="relative w-full py-24 lg:py-32 flex items-center justify-center text-center bg-contain bg-center"
     style="background-image: url('{{ $heroImageUrl }}');">
     <div class="absolute inset-0 bg-gradient-to-r from-blue-800/90 to-yellow-700/90"></div>
-    <div class="relative z-10 px-4 mt-[5vh] mb-[25vh]">
+    <div class="relative z-10 px-4 mt-[17vh] mb-[17vh]">
       <h2 class="text-white text-lg lg:text-2xl tracking-widest lg:font-bold my-2" data-aos="fade-down"
       data-aos-delay="200">Pemerintah Kabupaten Halmahera Timur</h2>
       <h1 class="text-3xl lg:text-5xl font-bold text-white" data-aos="fade-down">
@@ -18,14 +18,14 @@
       data-aos-delay="400">Jelajahi Bagaimana Kami Menjalankan SPBE</h2>
     </div>
     </div>
-    <div class="absolute bottom-0 left-0 w-full h-auto z-0">
+    <!-- <div class="absolute bottom-0 left-0 w-full h-auto z-0">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 170" preserveAspectRatio="none"
       class="w-full h-auto block">
       <path
       d="M0 135L90 135L90 91L180 91L180 56L270 56L270 90L360 90L360 68L450 68L450 37L540 37L540 133L630 133L630 142L720 142L720 102L810 102L810 78L900 78L900 171L0 171Z"
       fill="#F9FAFB" />
     </svg>
-    </div>
+    </div> -->
   </div>
   {{-- END HERO SECTION --}}
 
