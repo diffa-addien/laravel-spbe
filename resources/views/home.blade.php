@@ -5,7 +5,7 @@
 @section('content')
   {{-- HERO SECTION --}}
   <div class="relative w-full">
-    <div class="relative w-full py-24 lg:py-32 flex items-center justify-center text-center bg-contain bg-center"
+    <div id="home" data-section class="relative w-full py-24 lg:py-32 flex items-center justify-center text-center bg-contain bg-center"
     style="background-image: url('{{ $heroImageUrl }}');">
     <div class="absolute inset-0 bg-gradient-to-r from-blue-800/90 to-yellow-700/90"></div>
     <div class="relative z-10 px-4 mt-[17vh] mb-[19vh]">
@@ -30,7 +30,7 @@
   {{-- END HERO SECTION --}}
 
   {{-- SECTION LAYANAN --}}
-  <div id="layanan" class="bg-gray-50 pt-24 pb-16">
+  <div id="layanan" data-section class="bg-gray-50 pt-24 pb-16">
     <div class="container mx-auto px-6">
     <div class="text-center mb-12" data-aos="fade-up">
       <h2 class="text-3xl font-bold text-gray-800">Layanan Aplikasi</h2>
@@ -107,7 +107,7 @@
   {{-- END SECTION DOMAIN SPBE (TABLE) --}}
 
   {{-- SECTION INDEKS SPBE --}}
-  <div id="indeks" class="bg-white py-16">
+  <div id="indeks" data-section class="bg-white py-16">
     <div class="container mx-auto px-6">
     <div class="text-center mb-12" data-aos="fade-up">
       <h2 class="text-3xl font-bold text-gray-800">Perkembangan SPBE</h2>
@@ -157,7 +157,7 @@
   {{-- END SECTION INDEKS SPBE --}}
 
   {{-- SECTION KEGIATAN --}}
-  <div id="kegiatan" class="bg-white py-16">
+  <div id="kegiatan" data-section class="bg-white py-16">
     <div class="container mx-auto px-6">
     <div class="text-center mb-12" data-aos="fade-up">
       <h2 class="text-3xl font-bold text-gray-800">Kegiatan</h2>
@@ -189,7 +189,7 @@
   </div>
 
   {{-- SECTION BERITA --}}
-  <div id="berita" class="bg-gray-50 py-16">
+  <div id="berita" data-section class="bg-gray-50 py-16">
     <div class="container mx-auto px-6">
     <div class="text-center mb-12" data-aos="fade-up">
       <h2 class="text-3xl font-bold text-gray-800">Berita Terbaru</h2>

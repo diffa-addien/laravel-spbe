@@ -21,26 +21,65 @@
   </script>
 </head>
 
-<body class="bg-gray-50 font-sans">
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
 
-  {{-- ================= HEADER BARU ================= --}}
+<head>
+  {{-- ... (Isi
+
+  <head> tidak berubah) ... --}}
+  </head>
+
+  {{-- FIX: Logika x-data diubah untuk mengenali halaman aktif saat dimuat --}}
+
+<body x-data="{ 
+        activeSection: '{{ 
+            request()->is('/') ? 'home' : (request()->routeIs('domain-spbe.show') ? 'domain' : '') 
+        }}' 
+    }" x-init="
+        if (document.querySelector('[data-section]')) {
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        activeSection = entry.target.id;
+                    }
+                });
+            }, { rootMargin: '-50% 0px -50% 0px' });
+
+            document.querySelectorAll('[data-section]').forEach(section => {
+                observer.observe(section);
+            });
+        }
+    " class="bg-gray-50 font-sans flex flex-col min-h-screen">
+
   <header x-data="{ open: false }" class="bg-white shadow-md sticky top-0 z-50">
     <nav class="container mx-auto px-6 py-2">
       <div class="flex items-center justify-between">
-
         <div class="text-xl font-bold text-gray-800">
-          <a href="/">
-            <img src="{{ url('assets/SPBE_Haltim.jpg') }}" alt="Logo SPBE Haltim" class="h-[50px]">
-          </a>
+          <a href="/"><img src="{{ url('assets/SPBE_Haltim.jpg') }}" alt="Logo SPBE Haltim" class="h-[50px]"></a>
         </div>
 
         <div class="hidden md:flex items-center space-x-8 font-semibold">
-          <a href="/" class="text-gray-800 hover:text-blue-600">BERANDA</a>
-          {{-- Link diubah menjadi /#... --}}
-          <a href="{{ route('domain-spbe.show') }}" class="block py-2 px-4 text-sm text-gray-800 hover:bg-gray-100 rounded">DOMAIN</a>
-          <a href="/#indeks" class="text-gray-500 hover:text-blue-600">INDEKS</a>
-          <a href="/#kegiatan" class="text-gray-500 hover:text-blue-600">KEGIATAN</a>
-          <a href="/#berita" class="text-gray-500 hover:text-blue-600">BERITA</a>
+          <a href="/"
+            :class="{ 'text-green-600 border-green-600 border-b-2': activeSection === 'home', 'text-gray-800': activeSection !== 'home' }"
+            class="pb-1 transition">BERANDA</a>
+          <a href="/#layanan"
+            :class="{ 'text-green-600 border-green-600 border-b-2': activeSection === 'layanan', 'text-gray-500': activeSection !== 'layanan' }"
+            class="pb-1 transition hover:text-green-600">LAYANAN</a>
+          {{-- FIX: Link DOMAIN diubah ke route halaman, bukan anchor link --}}
+          <a href="{{ route('domain-spbe.show') }}"
+            :class="{ 'text-green-600 border-green-600 border-b-2': activeSection === 'domain', 'text-gray-500': activeSection !== 'domain' }"
+            class="pb-1 transition hover:text-green-600">DOMAIN</a>
+
+          <a href="/#indeks"
+            :class="{ 'text-green-600 border-green-600 border-b-2': activeSection === 'indeks', 'text-gray-500': activeSection !== 'indeks' }"
+            class="pb-1 transition hover:text-green-600">INDEKS</a>
+          <a href="/#kegiatan"
+            :class="{ 'text-green-600 border-green-600 border-b-2': activeSection === 'kegiatan', 'text-gray-500': activeSection !== 'kegiatan' }"
+            class="pb-1 transition hover:text-green-600">KEGIATAN</a>
+          <a href="/#berita"
+            :class="{ 'text-green-600 border-green-600 border-b-2': activeSection === 'berita', 'text-gray-500': activeSection !== 'berita' }"
+            class="pb-1 transition hover:text-green-600">BERITA</a>
         </div>
 
         <div class="md:hidden">
@@ -55,22 +94,28 @@
       </div>
 
       <div x-show="open" @click.away="open = false" x-transition class="md:hidden mt-4">
-        <a href="/" class="block py-2 px-4 text-sm text-gray-800 hover:bg-gray-100 rounded">BERANDA</a>
-        {{-- Link diubah menjadi /#... --}}
-        <a href="/#domain" @click="open = false"
+        <a href="/" @click="open = false" :class="{ 'bg-green-100 text-green-700': activeSection === 'home' }"
+          class="block py-2 px-4 text-sm text-gray-800 rounded">BERANDA</a>
+        <a href="/#layanan" @click="open = false"
+          :class="{ 'bg-green-100 text-green-700': activeSection === 'layanan' }"
+          class="block py-2 px-4 text-sm text-gray-800 hover:bg-gray-100 rounded">LAYANAN</a>
+        {{-- FIX: Link DOMAIN diubah ke route halaman --}}
+        <a href="{{ route('domain-spbe.show') }}" @click="open = false"
+          :class="{ 'bg-green-100 text-green-700': activeSection === 'domain' }"
           class="block py-2 px-4 text-sm text-gray-800 hover:bg-gray-100 rounded">DOMAIN</a>
-        <a href="/#indeks" @click="open = false"
+
+        <a href="/#indeks" @click="open = false" :class="{ 'bg-green-100 text-green-700': activeSection === 'indeks' }"
           class="block py-2 px-4 text-sm text-gray-800 hover:bg-gray-100 rounded">INDEKS</a>
         <a href="/#kegiatan" @click="open = false"
+          :class="{ 'bg-green-100 text-green-700': activeSection === 'kegiatan' }"
           class="block py-2 px-4 text-sm text-gray-800 hover:bg-gray-100 rounded">KEGIATAN</a>
-        <a href="/#berita" @click="open = false"
+        <a href="/#berita" @click="open = false" :class="{ 'bg-green-100 text-green-700': activeSection === 'berita' }"
           class="block py-2 px-4 text-sm text-gray-800 hover:bg-gray-100 rounded">BERITA</a>
       </div>
     </nav>
   </header>
-  {{-- ================= END HEADER BARU ================= --}}
 
-  <main>
+  <main class="flex-grow">
     @yield('content')
   </main>
 
