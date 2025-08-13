@@ -5,10 +5,10 @@
 @section('content')
   {{-- HERO SECTION --}}
   <div class="relative w-full">
-    <div class="relative w-full py-24 lg:py-32 flex items-center justify-center text-center bg-cover bg-center"
+    <div class="relative w-full py-24 lg:py-32 flex items-center justify-center text-center bg-contain bg-center"
     style="background-image: url('{{ $heroImageUrl }}');">
     <div class="absolute inset-0 bg-gradient-to-r from-blue-800/90 to-yellow-700/90"></div>
-    <div class="relative z-10 px-4 mb-[20vh]">
+    <div class="relative z-10 px-4 mt-[5vh] mb-[25vh]">
       <h2 class="text-white text-lg lg:text-2xl tracking-widest lg:font-bold my-2" data-aos="fade-down"
       data-aos-delay="200">Pemerintah Kabupaten Halmahera Timur</h2>
       <h1 class="text-3xl lg:text-5xl font-bold text-white" data-aos="fade-down">
